@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Stranica</title>
-    <link rel="stylesheet" href="zad7.css">
+    <link rel="stylesheet" href="stil.css">
 </head>
 <body>
 	    <header>
@@ -13,15 +13,15 @@
 	
     <nav>
         <a href="#kviz">Kviz</a>
-        <a href="#galerija">Galerija</a>
+        <a href="#galerija">Skupine mišića</a>
         <a href="#video">Video</a>
-        <a href="#audio">Audio</a>
-        <a href="#iframe">Planer</a>
+        <a href="#audio">Glazba</a>
+        <a href="#iframe">Prehrana</a>
         <a href="#forma">Registracija</a>
     </nav>
 
     <div class="container">
-        <!-- Kviz -->
+  
         <div class="section quiz">
             <h2>Kviz: koliko ste upoznati s mišićima i vlastitim tijelom?</h2>
             <p>Koji mišić je odgovoran za fleksiju lakta?</p>
@@ -31,7 +31,6 @@
             <p id="result1"></p>
         </div>
 
-        <!-- Mišićne skupine -->
         <div id="galerija" class="section">
             <h2>Mišićne skupine:</h2>
             <p>(klikni na mišićnu skupinu za prikaz)</p>
@@ -47,7 +46,7 @@
             <img id="image" src="" alt="Slika mišićne skupine" style="max-width: 100%; height: auto; margin-top: 20px;">
         </div>
 
-        <!-- Evidencija prehrane -->
+
         <div id="iframe" class="section">
             <h2>Evidencija prehrane</h2>
             <form id="meal-planner">
@@ -70,7 +69,7 @@
             <ul id="meal-list"></ul>
         </div>
 
-        <!-- Registracija -->
+     
         <div id="forma" class="section">
             <h2>Registracija za treninge</h2>
             <form onsubmit="handleSubmit(event)">
@@ -94,7 +93,7 @@
     </div>
 
     <script>
-        // Funkcija za provjeru odgovora u kvizu
+        
         function checkAnswer(answer, resultId) {
             const resultElement = document.getElementById(resultId);
             if (answer === 'correct') {
@@ -106,12 +105,12 @@
             }
         }
 
-        // Funkcija za prikazivanje slike iz galerije
+  
         function showImage(image) {
             document.getElementById('image').src = image;
         }
 
-        // Funkcija za slanje forme (registracija)
+      
         function handleSubmit(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
@@ -120,26 +119,26 @@
             document.getElementById('form-result').textContent = `Hvala, ${name}. Registrirani ste za cilj: ${goal}.`;
         }
 
-        // Funkcija za spremanje obroka
+  
         document.getElementById("meal-planner").addEventListener("submit", function(event) {
-            event.preventDefault(); // Sprječava automatsko slanje forme
+            event.preventDefault(); 
 
-            // Dohvati vrijednosti iz forme
+           
             var mealName = document.getElementById("meal-name").value;
             var mealTime = document.getElementById("meal-time").value;
             var calories = document.getElementById("calories").value;
             var protein = document.getElementById("protein").value;
 
-            // Provjerite imaju li vrijednosti
+         
             if(mealName && mealTime && calories && protein) {
-                // Kreiraj novi <li> element s podacima
+                
                 var listItem = document.createElement("li");
                 listItem.textContent = `Obrok: ${mealName}, Vrijeme: ${mealTime}, Kalorije: ${calories}, Proteini: ${protein}g`;
                 
-                // Dodaj novi obrok u listu
+               
                 document.getElementById("meal-list").appendChild(listItem);
 
-                // Očisti formu
+             
                 document.getElementById("meal-planner").reset();
             } else {
                 alert("Molimo popunite sva polja!");
