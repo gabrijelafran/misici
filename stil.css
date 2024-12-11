@@ -1,0 +1,148 @@
+/* Stil za cijeli body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Svijetla pozadina cijele stranice */
+    background-image: url("pozadina.jpg"); /* Pozadinska slika za cijelu stranicu */
+    background-size: cover; /* Slika se skalira da pokrije cijeli prostor */
+    background-position: center; /* Slika je centrirana u odnosu na prostor */
+    background-attachment: fixed; /* Fiksira pozadinsku sliku prilikom skrolanja */
+}
+
+/* Stil za pozadinsku sliku unutar header-a */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Poluprozirna crna pozadina iza teksta */
+    height: 300px; /* Visina trake s tekstom */
+    display: flex;
+    justify-content: center; /* Centriranje sadržaja horizontalno */
+    align-items: center; /* Centriranje sadržaja vertikalno */
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px; /* Veličina fonta za naslov */
+    margin: 0; /* Uklanjanje margina */
+    font-weight: bold; /* Podebljanje naslova */
+    color: #DFD9F8; /* Boja teksta u headeru */
+}
+
+/* Stil za navigacijski meni */
+nav {
+    background-color: rgba(0, 0, 0, 0.6); /* Poluprozirna crna pozadina */
+    padding: 10px 20px;  /* Visina trake */
+    text-align: center;
+    max-width: 1200px; /* Maksimalna širina trake */
+    margin: 0 auto; /* Centriranje trake na ekranu */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;  /* Razmak između linkova */
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Podcrtavanje pri prelasku miša */
+}
+
+/* Stil za sadržaj */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Centriranje sadržaja u containeru */
+}
+
+/* Stil za naslove */
+h1, h2 {
+    color: #0056b3;
+}
+
+/* Stil za sekcije */
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #e6f2ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stil za slike, video i iframe */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Stil za audio */
+audio {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Stil za dugmadi */
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Prijelazna animacija */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Stil za formu */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Stil za inpute, selecte i dugmadi unutar forme */
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Stil za kviz sliku */
+.quiz img {
+    margin: 20px 0;
+}
+
+/* Responsivni dizajn za manje ekrane */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px; /* Smanjena veličina fonta na manjim ekranima */
+    }
+
+    nav a {
+        font-size: 16px; /* Smanjena veličina fonta na manjim ekranima */
+        margin: 0 10px; /* Manji razmak između linkova */
+    }
+
+    .container {
+        padding: 10px; /* Manji razmak oko sadržaja na manjim ekranima */
+    }
+
+    .section {
+        margin-bottom: 20px; /* Manji razmak između sekcija */
+        padding: 15px; /* Manji razmak unutar sekcija */
+    }
+
+    button {
+        font-size: 14px; /* Smanjena veličina fonta na manjim ekranima */
+    }
+}
